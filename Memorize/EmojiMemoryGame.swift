@@ -14,7 +14,7 @@ class EmojiMemoryGame: ObservableObject {
                                  "🏍", "🛺", "🚠", "🛵", "🚗", "🚚", "🚇", "🛻", "🚝"]
     
     static func createMemoryGame() -> MemoryGame<String> {
-        MemoryGame<String>(numberOfPairsOfCards: 4) { pairIndex in
+        MemoryGame<String>(numberOfPairsOfCards: 8) { pairIndex in
             emojis[pairIndex]
         }
     }
@@ -28,7 +28,7 @@ class EmojiMemoryGame: ObservableObject {
     
     //MARK: - Intent
     
-    func chose(_ card: MemoryGame<String>.Card) {
+    func choose(_ card: MemoryGame<String>.Card) {
         //        objectWillChange.send()
         model.choose(card)
     }
